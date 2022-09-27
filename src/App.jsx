@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Hello from '../src/components/Hello'
 import './App.css'
+import pizza from '../src/img/pizza-steve.png';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
       <div>
         <a href="https://static.wikia.nocookie.net/universosteven/images/1/1f/Pizza_Steve.png/revision/latest?cb=20150410231308&path-prefix=es" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
+          <img src={pizza} className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
