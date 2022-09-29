@@ -1,5 +1,5 @@
 import React from 'react'
-import { Center, Square, Circle,Heading } from '@chakra-ui/react'
+import { Center, Square, Circle,Heading, Box, Image, Highlight } from '@chakra-ui/react'
 import { Button, ButtonGroup} from '@chakra-ui/react'
 import { Stack, HStack, VStack } from '@chakra-ui/react'
 import { IconButton } from '@chakra-ui/react'
@@ -19,6 +19,8 @@ DrawerOverlay,
 DrawerContent,
 DrawerCloseButton,
 } from '@chakra-ui/react'
+import Toast from './Toast'
+import Transitions from './Transitions'
 
 
 
@@ -42,6 +44,7 @@ return (
 
   <IconButton aria-label='Search database' colorScheme='blue' icon={<SearchIcon />} />
   <Heading noOflines={1}>Hola me llamo portero daniel exequiel</Heading>
+  <Heading as="h2" size="2xl">Hola mundo</Heading>
 
 
   <Flex direction="row" justify="center" align="center">
@@ -81,6 +84,25 @@ return (
 <Code children="console.log(welcome)" colorScheme="red"/>
 
 
+<Toast/>
+
+<Transitions/>
+
+<Flex direction="row" mt="50px" justify="center" py="100px">
+<Box boxSize='xl'>
+  <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+  <Image mt="30px" src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+</Box>
+</Flex>
+
+<Heading lineHeight='tall'>
+  <Highlight
+    query='spotlight'
+    styles={{ px: '2', py: '1', rounded: 'full', bg: 'red.100' }}
+  >
+    With the Highlight component, you can spotlight words.
+  </Highlight>
+</Heading>
 
 </div>
 
